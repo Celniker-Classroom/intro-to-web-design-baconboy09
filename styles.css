@@ -1,3 +1,13 @@
 .center {
     display: flex; justify-content: center;
 }
+a:link {
+  text-decoration: none;
+}
+.quote:hover{
+    color:blue;
+    
+}
+.quote:not(:hover){
+    color: black;
+}
