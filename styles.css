@@ -1,5 +1,14 @@
+body {
+    padding: 50px;
+    font-family: 'Montserrat', sans-serif;
+}
 .center {
-    display: flex; justify-content: center;
+    display: flex; justify-content: center; gap: 20px;
+}
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 a:link {
   text-decoration: none;
@@ -10,4 +19,9 @@ a:link {
 }
 .quote:not(:hover){
     color: black;
+}
+
+.img {
+   
+    border: 10px solid #000080;
 }
