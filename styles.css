@@ -2,6 +2,9 @@ body {
     padding: 50px;
     font-family: 'Montserrat', sans-serif;
 }
+p {
+    font-family: Arial, sans-serif;
+}
 .center {
     display: flex; justify-content: center; gap: 20px;
 }
@@ -15,13 +18,10 @@ a:link {
 }
 .quote:hover{
     color:blue;
-    
 }
 .quote:not(:hover){
     color: black;
 }
-
 .img {
-   
     border: 10px solid #000080;
 }
