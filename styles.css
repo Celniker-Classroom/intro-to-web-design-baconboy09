@@ -1,6 +1,16 @@
 body {
     padding: 50px;
     font-family: 'Montserrat', sans-serif;
+    background-color: #f3f6fb;
+}
+#container {
+    width: 900px;
+    max-width: 96%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border: 2px solid #d8e3f0;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
 }
 p {
     font-family: Arial, sans-serif;
@@ -15,6 +25,7 @@ p {
     
 }
 a:link {
+  color: #0074d9;
   text-decoration: none;
 }
 a:visited {
@@ -22,6 +33,7 @@ a:visited {
 }
 a:hover {
   color: #ff4500;
+  text-decoration: underline;
 }
 .quote:hover {
     color: blue;
@@ -56,6 +68,36 @@ a:hover {
         width: 100%;
         max-width: 100%;
     }
+}
+
+#pic1 {
+    float: left;
+    margin: 0 16px 16px 0;
+    width: 220px;
+    height: auto;
+    border: 10px solid #000080;
+}
+
+#pic2 {
+    float: right;
+    margin: 0 0 16px 16px;
+    width: 220px;
+    height: auto;
+    border: 10px solid #000080;
+}
+
+#pic3 {
+    float: left;
+    margin: 0 16px 16px 0;
+    width: 220px;
+    height: auto;
+    border: 10px solid #000080;
+}
+
+#container::after {
+    content: "";
+    display: block;
+    clear: both;
 }
 
 @media (max-width: 768px) {
