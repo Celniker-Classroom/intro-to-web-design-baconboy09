@@ -2,6 +2,8 @@ body {
     padding: 50px;
     font-family: 'Montserrat', sans-serif;
     background-color: #f3f6fb;
+    cursor: url("images/flowing-rainbow-gold-transparent/Left Flowing Rainbow Gold Arrow2.cur"),
+            crosshair;
 }
 #container {
     width: 900px;
@@ -11,6 +13,10 @@ body {
     padding: 20px;
     border: 2px solid #d8e3f0;
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+}
+.quote{
+   
+    color: #000080;
 }
 p {
     font-family: Arial, sans-serif;
@@ -25,22 +31,20 @@ p {
     
 }
 a:link {
-  color: #0074d9;
+  color: #26466D;
   text-decoration: none;
+  cursor: url("images/flowing-rainbow-gold-transparent/Right Flowing Rainbow Gold Arrow2.cur"), pointer;
 }
 a:visited {
-  color: #551a8b;
+  color: #26466D;
+  cursor: url("images/flowing-rainbow-gold-transparent/Right Flowing Rainbow Gold Arrow2.cur"), pointer;
 }
 a:hover {
   color: #ff4500;
   text-decoration: underline;
+  cursor: url("images/flowing-rainbow-gold-transparent/Right Flowing Rainbow Gold Triangle.cur"), pointer;
 }
-.quote:hover {
-    color: blue;
-}
-.quote:not(:hover) {
-    color: black;
-}
+
 .img {
     border: 10px solid #000080;
 }
@@ -94,6 +98,16 @@ a:hover {
     border: 10px solid #000080;
 }
 
+.fixed-large {
+    height: 400px;
+    width: 300px;
+}
+
+.fixed-small {
+    height: 200px;
+    width: 300px;
+}
+
 #container::after {
     content: "";
     display: block;
@@ -113,4 +127,64 @@ a:hover {
     .img {
         border-width: 6px;
     }
+}
+
+/* Dark mode toggle control */
+#darkModeLabel {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 1000;
+    display: inline-block;
+    padding: 8px 14px;
+    font-size: 1rem;
+    border: 2px solid #0074d9;
+    background: #fff;
+    color: #0074d9;
+    border-radius: 6px;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+#darkModeLabel:hover {
+    background: #0074d9;
+    color: #fff;
+}
+#darkModeToggle:checked + #darkModeLabel {
+    background: #444;
+    color: #fff;
+    border-color: #888;
+}
+#darkModeToggle:checked + #darkModeLabel::after {
+    content: ' (Light)';
+}
+#darkModeLabel::after {
+    content: ' (Dark)';
+}
+
+/* Dark mode styling using CSS :has */
+body:has(#darkModeToggle:checked) {
+    background-color: #111;
+    color: #eee;
+}
+body:has(#darkModeToggle:checked) #container {
+    background-color: #1f2028;
+    border: 2px solid #333;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.6);
+}
+body:has(#darkModeToggle:checked) a:link,
+body:has(#darkModeToggle:checked) a:visited {
+    color: #8ab4f8;
+}
+body:has(#darkModeToggle:checked) a:hover {
+    color: #ffb347;
+}
+body:has(#darkModeToggle:checked) .quote:not(:hover) {
+    color: #ddd;
+}
+body:has(#darkModeToggle:checked) .img,
+body:has(#darkModeToggle:checked) #pic1,
+body:has(#darkModeToggle:checked) #pic2,
+body:has(#darkModeToggle:checked) #pic3 {
+    border-color: #ddd;
 }
