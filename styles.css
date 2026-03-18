@@ -1,5 +1,6 @@
 body {
     padding: 50px;
+    line-height: 1.6; 
     font-family: 'Montserrat', sans-serif;
     background-color: #f3f6fb;
     cursor: url("images/flowing-rainbow-gold-transparent/Left Flowing Rainbow Gold Arrow2.cur"),
@@ -19,7 +20,7 @@ body {
     color: #000080;
 }
 p {
-    font-family: Arial, sans-serif;
+    font: 16px Arial, sans-serif; 
 }
 .center {
     display: flex; justify-content: center; gap: 20px;
